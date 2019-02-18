@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+                <meta name="keywords" content="" />
+                <meta name="description" content="" />        
+                <link href="css/style.css" rel="stylesheet" type="text/css"/>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <meta charset="utf-8">
+                <title>Сальный салон</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+                <script>
+                 var obj = JSON.parse(str);
+                  function show_div(id)
+                        {
+                          for (var i = 0; i < document.getElementById("texts").getElementsByTagName("div").length; i++)
+                          {
+                            var div = document.getElementById("texts").getElementsByTagName("div")[i];
+                            if (div.id == id)
+                                div.style.display = "block";
+                            else
+                                div.style.display = "none";
+                          }
+                        }</script>
+        </head>
+        <a href="index.html"><header><h1 class="header" align="center">Сальный салон </h1></header></a>
+   
+        <body class="bg">
+
+                <div id="texts">
+                        <div id="about_lions" class="widget">
+                        Главная
+                        </div>
+                        <div id="about_bears" class="widget">
+                        Авто
+                        </div>
+                        <div id="about_cats" class="widget">
+                        Контакты
+                        </div>
+                        <div class="head">
+                                Главная
+                                </div>
+                </div>
+                    <div class="sidebar" align="left">
+                            <h3 class="widget-title">Категории</h3>
+                            <ul class="widget-list">
+                            <li><a href="/ru/body.html" onclick="show_div('about_lions')" target="right_side">
+                                Главная     
+                            </a></li>
+                            <li><a href="/ru/body.html" target="right_side" onclick="show_div('about_bears')">Перейти к нижней части текста
+                             
+                            </a</li>
+                            <li><a href="/ru/menu.html" target="right_side" onclick="show_div('about_cats')">Контакты
+                              
+                                  </a></li>
+                            </ul>
+                        
+                        </div>
+                      
+                        <iframe name="right_side" src="/ru/body.html" class="content">
+                            <p>asdasdasd</p>
+                        </iframe>
+                      
+                    <div class="footer">
+                    end    
+                    </div>
+        </body>
+    </html>
