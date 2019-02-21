@@ -132,7 +132,7 @@ max-width: 100%;
   overflow: hidden;
  }
  .menucont {
-  display: table;
+  position: relative;
   text-align: justify;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
   padding: 5px; /* Поля внутри блока */
