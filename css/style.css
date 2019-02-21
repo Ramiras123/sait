@@ -85,37 +85,34 @@ max-width: 100%;
 
  }
 
- .tablecar{
-   display: table;
-   padding: 10%;
- }
- .td1 {
-  display: table-cell;
-  background: rgb(133, 108, 156);
-  border: 3px solid #333; 
- }
- figure:first-child {
-  margin-left: 0; /* Убираем отступ для первого элемента */
- }
+
  .sidebar {
-  display: table;
+   display: block;
+   position: relative;
   float: left; /* Обтекание справа */
   border: 5px solid #333; /* Рамка левого меню */
-  padding: 5%; /* Поля внутри блока */
+  padding: 1px; /* Поля внутри блока */
+  height: 100%;
+  width: 20%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: auto;
   background-image: url(../images/images.jpeg);
   background-size: cover;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
  }  
  
  .content {
-  display: table;
-  position: relative;
+   display: block;
+   position: relative;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
-  padding: 5px; /* Поля внутри блока */
   border: 5px solid #333; /* Рамка контента */
   background-image: url(../images/images.jpeg);
   background-size: cover;
+
+  overflow: auto;
   height: 100%;
+  min-height: 100%;
   max-height: 100%;
  }
  .contentmenu {
@@ -123,7 +120,7 @@ max-width: 100%;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
   width: auto;
   text-align: justify;
-  padding: 5px; /* Поля внутри блока */
+  padding: 25px; /* Поля внутри блока */
   border: 5px solid #333; /* Рамка контента */
   background-image: url(../images/images.jpeg);
   background-size: cover;
