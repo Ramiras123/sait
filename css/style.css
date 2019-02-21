@@ -87,10 +87,7 @@ max-width: 100%;
 
  .tablecar{
    display: table;
-   padding-right: 15px;
-   padding-left: 15px;
-   padding-top: 5%;
-
+   padding: 10%;
  }
  .td1 {
   display: table-cell;
@@ -101,10 +98,10 @@ max-width: 100%;
   margin-left: 0; /* Убираем отступ для первого элемента */
  }
  .sidebar {
-  display: block;
+  display: table;
   float: left; /* Обтекание справа */
   border: 5px solid #333; /* Рамка левого меню */
-  padding: 35px; /* Поля внутри блока */
+  padding: 5%; /* Поля внутри блока */
   background-image: url(../images/images.jpeg);
   background-size: cover;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
