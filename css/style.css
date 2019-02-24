@@ -6,6 +6,9 @@
   font-family: 'Roboto', sans-serif;
   display: none;
 }
+.imgs{
+  max-width: 100%; height:auto;
+}
 .widget-title {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -109,11 +112,16 @@ max-width: 100%;
   border: 5px solid #333; /* Рамка контента */
   background-image: url(../images/images.jpeg);
   background-size: cover;
-
+  font-size: auto;
   overflow: auto;
   height: 100%;
   min-height: 100%;
   max-height: 100%;
+ }
+ .td1{
+  background: rgb(133, 108, 156);
+  padding: 5px; /* Поля вокруг текста */ 
+  border: 3px solid #333; 
  }
  .contentmenu {
   position: relative;
