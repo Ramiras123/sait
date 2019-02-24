@@ -84,7 +84,7 @@ max-width: 100%;
   word-spacing: 20px;
   padding: 15px; /* Поля внутри блока */
    font-family: 'Roboto', sans-serif;
-   margin: 0px 0px 0px, auto; /* Значения отступа от блока */
+   margin: 0; /* Значения отступа от блока */
 
  }
 
@@ -182,21 +182,12 @@ height: 1000px;
 .a1{
   text-decoration: none; 
 }
-.imges {
-  display:table
-  min-width: 1%;
-  min-height: 1%;
-  max-width: 50px;
-  width: 1%;
-  height: 50px;
-  max-height: 1%;
-}
 
  .button {
   display: inline-block;
   vertical-align: top;
-  height: 5%;
-  line-height: 250%;
+  height: 15%;
+  line-height: 300%;
   padding: 0 25px;
   font-family: inherit;
   font-size: 15px;
@@ -216,10 +207,10 @@ height: 1000px;
   background-image: -o-linear-gradient(top, #3d3d3d, #272727);
   background-image: linear-gradient(to bottom, #3d3d3d, #272727);
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.09), 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.09), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 5px rgba(255, 255, 255, 0.09), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .button:active, .button.active {
-  line-height: 250%;
+  line-height: 300%;
   color: #ccc;
   height: 5%;
   padding: 0 25px;
@@ -233,5 +224,5 @@ height: 1000px;
   background-image: -o-linear-gradient(top, #a3161a, #b63335 60%, #bf4749);
   background-image: linear-gradient(to bottom, #a3161a, #b63335 60%, #bf4749);
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.09);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.09);
 }
