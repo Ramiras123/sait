@@ -116,6 +116,7 @@ max-width: 100%;
  }
  
  .imgs{
+   min-height: 50%;
    max-width: auto;
    max-height: auto;
  }
