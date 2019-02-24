@@ -111,7 +111,7 @@ max-width: 100%;
   font-size: auto;
   overflow: auto;
   height: auto;
-  min-height: auto;
+  min-height: 100%;
   max-height: auto;
  }
  
@@ -122,14 +122,16 @@ max-width: 100%;
 
  .td1{
 
-  text-align: justify;
+  text-align: left;
   background: rgb(133, 108, 156);
   border: 3px solid #333; 
   height: auto;
   width: 25%;
-  max-width: 25%;
+  max-width: 100%;
   min-width: 25%;
  }
+
+
  .contentmenu {
   position: relative;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
