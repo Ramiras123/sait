@@ -117,7 +117,7 @@ max-width: 100%;
  
  .imgs{
    max-width: auto;
-   max-width: auto;
+   max-height: auto;
  }
 
  .td1{
@@ -125,11 +125,10 @@ max-width: 100%;
   text-align: justify;
   background: rgb(133, 108, 156);
   border: 3px solid #333; 
-  width: 25%;
   height: auto;
-  max-width: 50%;
-  min-width: auto;
-  max-height: auto;
+  width: 25%;
+  max-width: 25%;
+  min-width: 25%;
  }
  .contentmenu {
   position: relative;
