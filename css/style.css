@@ -37,10 +37,10 @@
 .ad{
   text-decoration: none;
 }
-html, body, head {
+html, body {
   background-image: url(../images/5b4efe189df6e164ac909047.jpg);
   background-size: cover;
-  width: 100%;
+  width: auto;
   height: 100%;
   max-width: 100%;
   word-wrap: break-word; /* Перенос слов */ 
@@ -103,7 +103,6 @@ max-width: 100%;
  
  .content {
    display: block;
-  
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
   border: 5px solid #333; /* Рамка контента */
   background-image: url(../images/images.jpeg);
@@ -113,6 +112,7 @@ max-width: 100%;
   height: auto;
   min-height: 100%;
   max-height: auto;
+
  }
  
  .imgs{
@@ -153,16 +153,15 @@ max-width: 100%;
 
 
  .contentmenu {
+  display: block;
   position: relative;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
-  width: auto;
   text-align: justify;
   padding: 25px; /* Поля внутри блока */
   border: 5px solid #333; /* Рамка контента */
   background-image: url(../images/images.jpeg);
   background-size: cover;
   height: auto;    
-
   overflow: hidden;
  }
  .menucont {
