@@ -46,7 +46,6 @@ html, body {
   word-wrap: break-word; /* Перенос слов */ 
   font: 14px Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */
   margin: 0; /* Отступы на странице */
-  overflow-x: hidden;
 }
  .header {
   bottom: 0;
@@ -72,7 +71,6 @@ max-width: 100%;
  .head {
    display: block;
   position: relative;
-   width: 100%;
   /* position: relative; */
   color: #404040;
   background: #373939;
