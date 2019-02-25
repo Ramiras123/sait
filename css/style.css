@@ -47,6 +47,8 @@ html, body {
   font: 14px Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */
   margin: 0; /* Отступы на странице */
 }
+
+
  .header {
   bottom: 0;
   display: block;
@@ -208,11 +210,12 @@ height: 1000px;
 .a1{
   text-decoration: none; 
 }
+ .button{
 
- .button {
   display: inline-block;
   vertical-align: top;
-  height: 15%;
+  height: 5%;
+  outline: none;
   line-height: 300%;
   padding: 0 25px;
   font-family: inherit;
@@ -235,9 +238,10 @@ height: 1000px;
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.09), 0 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 5px rgba(255, 255, 255, 0.09), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-.button:active, .button.active {
+.button:focus, .button:hover, .button:active{
   line-height: 300%;
   color: #ccc;
+  outline: none;
   height: 5%;
   padding: 0 25px;
   margin-bottom: 10px;

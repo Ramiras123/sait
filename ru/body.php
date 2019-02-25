@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+                <meta name="keywords" content="" />
+                <meta name="description" content="" />        
+                <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <meta charset="utf-8">
+                <title>Автосалон | Автомобили</title>
+
+        </head>
+        <a href="../index.php" class="a1"><header class="header"></header></a>
+        <body class="bg">
+        <form action="s/script.php" method="POST" >
+        <div class="head">
+        <?php 
+        include("text/head.html");
+  ?>
+</div>
+</form>
+                    
+                    <div class="sidebar" align="left">
+                            <h3 class="widget-title">Категории</h3>
+                            <ul class="widget-list">
+                            <li><a href="body.html">
+                                Автомобили 
+                                с пробегом    
+                            </a></li>
+                            <li><a href="body/newcar.html">Новые автомобили 
+                            </a</li>
+                            <li><a href="body/testdrive.html">Тест драйв</a></li>
+                            </ul>
+                        
+                        </div>
+                      
+                        <div class="content" align="center" >  
+                               <table width="100%" highth="100%" style="padding: 10px;"> 
+                                <tr>
+                                    <td valign="top" class="td1">
+                                    
+                                    
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRez-Tmi0d8msrqN54ebmiPNXILs5nbpj7OlF9zFi0SDocHhlS5" width="100%" height="300px" class="imgs">
+                           
+                      <p align="center">Audi Q5
+                            </p>
+                            <p align="center">
+                                850 000р 2.0 TFSI Tiptronic quattro
+                            </p>
+                            <details>
+                                    <summary>
+                                    Информация
+                                    </summary>
+                                    Технические характеристики соответствуют заявленным. Юридические ограничения не обнаружены. ДТП не обнаружены.
+                                   <p>
+                                   <br> <b>Размеры:</b> 4 663-4 671 мм Длина x 1 893 мм Ширина x 1 635-1 659 мм Высота
+                                   <br><b>Расход топлива:</b> 6,8-8,3 л/100 км смешанный (8-11 город, 5,9-6,8 трасса)
+                                   <br><b>Объем топливного бака:</b> 70 л
+                                        <br><b> Трансмиссия:</b>7-ступенчатая механическая, 8-ступенчатая автоматическая
+
+                                    <br><b> Комментарий предыдущего владельца:</b>
+                                       <br> Машинку ранил неопытный водитель на ваз 2109, с ранением пусть машинка будет по цене 850 0000 рублей, подлечу в марте опять будет 950 000 рублей! Ремонта максимум 20 000 рублей
+                                    </p>
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YyBOK64_G9Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </details>
+                                    </td>
+                                    <td class="td1" valign="top">
+                                            <img src=" https://www.major-expert.ru/files/resources/cars_images/1112709/list/1112709_5565236.JPG"  width="100%" height="300px" class="imgs">
+                                            <p align="center">Audi Q7
+                                            </p >
+                                            <p align="center">
+                                            900 000р 3.0 TDI clean diesel tiptronic quattro
+                                            </p>
+                                            <details> 
+                                                    <summary>
+                                                        Информация
+                                                    </summary>
+                                                    <br>
+                                                   <b> Проверка по VIN</b>
+                                                   <br> WAUZZZRR*CA****19
+                                                   <br><b>Нам не удалось найти информацию про указанный VIN. Будьте внимательны!</b>
+                                                   <p>
+                                                        <br><b> Размеры:</b> 5 052 мм Длина x 1 968 мм Ширина x 1 741 мм Высота
+                                                                <br> <b> Расход топлива:</b> 6,3-7,7 л/100 км смешанный (7,3-9,4 город, 5,7-6,8 трасса)
+                                                                        <br> <b> Объем топливного бака:</b> от 75 до 85 л
+                                                                                <br> <b> Разгон до 100 км/ч: </b>от 6,1 до 6,9 секунд
+
+                                                <br><br> <b>Комментарий предыдущего владельца:</b>
+                                           
+                                                <br> Отличный автомобиль во всех отношениях!
+                                                <br>Полная комплектация!
+                                                <br>Обслуживаем в Ауди центре! Недавно заменили масло и все три фильтра.
+                                                <br>Мы единственные владельцы автомобиля, поэтому за машиной следим.
+                                                <br>Машина в отличном состоянии как по кузову, салону так и по техническим характеристикам. Все работает на отлично! Коробка и двигатель в идеальном состоянии. Салон - пластик и кожа в отличном состоянии, мы за этим очень следим!
+                                                <br>В ДТП на ней не попадали!
+                                                <br>Машина очень надежная и простая в эксплуатации! Салон очень вместительный!
+                                                </p>
+                                                    
+                                                   
+                                                </details>
+                                    </td>
+                                    <td class="td1" valign="top">
+                                            <img src="https://povozcar.ru/wp-content/uploads/Audi-R8-2013_face.jpg" width="100%" height="300px" class="imgs">
+                                            <p align="center">Audi R8
+                                                </p >
+                                                <p align="center">
+                                                4 800 000р I Рестайлинг V10 plus
+                                                </p>
+                                            <details align="bottom">
+                                                    <summary>
+                                                        Информация
+                                                    </summary>
+                                                   
+                                                    <p><br><b>Разгон до 100 км/ч:</b> 3,2 секунд
+                                                            <br><b>Мощность в лошадиных силах:</b> 449 кВт
+                                                            <br><b>Максимальная скорость:</b> 330 км/ч
+                                                            <br><b>Двигатель:</b> 5,2 л V10
+                                                            <br><b>Расход топлива:</b>12 л/100 км смешанный (18 город, 9,3 трасса)
+                                                            <br><br> <b>Комментарий предыдущего владельца:</b>
+                                                            <br> Версия “Plus”, облегчённый кузов, улучшенная управляемость, форсированный мотор ! 
+                                                            <br> Состояние 5+, все элементы в заводском ЛКП, новые шины MICHELIN Pilot Sport 4S , полностью стоковая, спокойная и бережная эксплуатация, гарантия от производителя до конца года, цвет матовый синий, только диллерское обслуживание, коробка DSG, тормоза керамика ), мотор 550 л.с. !!! 
+                                                        
+                                                        
+                                                        </p>
+                                                   
+                                                </details>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <footer class="footer">
+                            <table width="100%" style="padding: 10px">
+                                <tr>
+                                    <td >
+                                           <a href="https://vk.com/audi" target="_blank"  class="a1"><img src="../images/1465826702_149_vk.png" width="60px" height="59px"></a>
+                                    
+                                    <a href ="https://www.instagram.com/audi/?hl=ru" target="_blank" class="a1"><img src="https://pngicon.ru/file/uploads/instagram.png" width="57px" height="57px"> 
+                                    </a>
+                                    </td>
+                                    <td>
+                                            <a href="https://vk.com/alexalex1233" target="_blank" class="a1"> <p align="right">2019 ® Smirnov and KO</p> </a>
+                                                <p align="right" >Все права защищены</p>
+                                    </td>
+                                </tr>
+                            </table>
+                                 </footer>
+        </body>
+    </html>
