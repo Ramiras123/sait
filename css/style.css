@@ -34,6 +34,9 @@
   color: #444;
   transition: .3s linear;
 }
+.a1{
+  content: "\2010";
+}
 .ad{
   text-decoration: none;
 }
@@ -41,11 +44,11 @@ html, body {
   background-image: url(../images/5b4efe189df6e164ac909047.jpg);
   background-size: cover;
   width: auto;
-  height: 100%;
+  height: auto;
   max-width: 100%;
+  margin: 0;
   word-wrap: break-word; /* Перенос слов */ 
   font: 14px Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */
-  margin: 0; /* Отступы на странице */
 }
 
 
@@ -70,40 +73,56 @@ max-width: 100%;
   width: 100%;
   height: 79px;
  }
- .head {
-   display: block;
-  position: relative;
-  /* position: relative; */
+ #blockid{ 
+  display: block;
   color: #404040;
+  top: 0;
   background: #373939;
   font-size: 10px;
   word-spacing: 20px;
   padding: 15px; /* Поля внутри блока */
    font-family: 'Roboto', sans-serif;
-   margin: 0; /* Значения отступа от блока */
-
- }
-
-
- .sidebar {
+   }
+ .fixed{
    display: block;
-   position: relative;
-  float: left; /* Обтекание справа */
+   position:fixed; 
+   color: #404040;
+   background: #373939;
+   font-size: 10px;
+   word-spacing: 20px;
+   padding: 15px; /* Поля внутри блока */
+    font-family: 'Roboto', sans-serif;
+    
+   width: 100%;  
+   background-image: url(../images/logo-Audi1.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position-y: 5px;
+}
+#blockid1{
+  display: flex;
+  flex-wrap: wrap;
+  color: #404040;
+   float: left;
+   overflow: auto;
+   height: 100%;
+  width:20%;
+  margin: 1% auto 1% 1%; 
   border: 5px solid #333; /* Рамка левого меню */
   padding: 1px; /* Поля внутри блока */
-  height: auto;
-  width: 20%;
-  min-height: auto;
-  max-height: auto;
   overflow: auto;
+  text-transform:  uppercase;
+ text-align: center; 
+  line-height: 50px; 
   background-image: url(../images/images.jpeg);
-  background-size: cover;
-  margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
- }  
- 
+  background-size: cover;}
+ .fixed1{
+   position:fixed; 
+}
  .content {
    display: block;
-  margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
+  margin: 1% 1% 1% 22%; /* Значения отступа от левого блока */
   border: 5px solid #333; /* Рамка контента */
   background-image: url(../images/images.jpeg);
   background-size: cover;
@@ -112,7 +131,6 @@ max-width: 100%;
   height: auto;
   min-height: 100%;
   max-height: auto;
-
  }
  
  .imgs{
@@ -154,7 +172,6 @@ max-width: 100%;
 
  .contentmenu {
   display: block;
-  position: relative;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
   text-align: justify;
   padding: 25px; /* Поля внутри блока */
@@ -165,7 +182,7 @@ max-width: 100%;
   overflow: hidden;
  }
  .menucont {
-  position: relative;
+  display: block;
   text-align: justify;
   margin: 1% 1% 1% 1%; /* Значения отступа от левого блока */
   padding: 5px; /* Поля внутри блока */
@@ -210,16 +227,38 @@ height: 1000px;
 .a1{
   text-decoration: none; 
 }
+summary::-webkit-details-marker  {
+  display: none;
+  outline: none;
+
+}
+details summary::-webkit-validation-bubble-heading{
+  display: none;
+  outline: none;
+
+}
+details summary{
+  cursor: default;
+  outline: none;
+}
+.details1 summary:before {
+  cursor: default;
+  content: "▲ ";
+  }
+.details1[open] summary:before {
+  cursor: default;
+  content: "▼ ";
+  }
  .button{
 
   display: inline-block;
   vertical-align: top;
-  height: 5%;
+  height: 40%;
+  line-height: 30px;
   outline: none;
-  line-height: 300%;
-  padding: 0 25px;
+  padding: 0 8px;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 12px;
   color: #bbb;
   text-align: center;
   text-decoration: none;
@@ -227,10 +266,11 @@ height: 1000px;
   background-color: #303030;
   background-clip: padding-box;
   border: 1px solid;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  margin-left: 0%;
   border-color: #202020 #1a1a1a #111;
-  border-radius: 25px;
+  border-radius: 50px;
   background-image: -webkit-linear-gradient(top, #3d3d3d, #272727);
   background-image: -moz-linear-gradient(top, #3d3d3d, #272727);
   background-image: -o-linear-gradient(top, #3d3d3d, #272727);
@@ -239,13 +279,12 @@ height: 1000px;
   box-shadow: inset 0 5px rgba(255, 255, 255, 0.09), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .button:focus, .button:hover, .button:active{
-  line-height: 300%;
   color: #ccc;
   outline: none;
-  height: 5%;
-  padding: 0 25px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  height: 40%;
+  line-height: 30px;
+  padding: 0 8px;
+  margin-bottom: 1%;
   vertical-align: top;
   background-color: #b42f32;
   border-color: #1c1c1c #202020 #222;

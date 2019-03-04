@@ -1,0 +1,16 @@
+details summary::-webkit-details-marker {
+    display: none;
+    }
+    details :focus {
+      outline: 0;
+    }
+    /* Firefox */
+    details, summary {
+    display: block;
+    }
+    details summary:before {
+    content: "▲ ";
+    }
+    details[open] summary:before {
+    content: "▼ ";
+    }
