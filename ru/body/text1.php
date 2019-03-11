@@ -28,7 +28,7 @@
                                 </details>
                                     </td>
                                     <td class="td1" valign="top">
-                                            <img src=" https://www.major-expert.ru/files/resources/cars_images/1112709/list/1112709_5565236.JPG"  width="100%" height="300px" class="imgs">
+                                            <img src="https://www.audi.ru/content/dam/nemo/ru/models/q7/new_q7/1920x600-aq7-151008-2e-auto-audi-a7-grau-j-videos-14u.jpg"  width="100%" height="100%" class="imgs">
                                             <p align="center">Audi Q7
                                             </p >
                                             <p align="center">
