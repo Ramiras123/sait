@@ -7,7 +7,7 @@
                 <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
                 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
                 <?php global $title; ?>
-                <title><?php echo isset($title) ? $title : "{YOUR SITE NAME}"; ?></title>
+                <title><?php echo isset($title) ? $title : "Ошибка"; ?></title>
                 <script type="text/javascript">
 $(document).ready(function() {
 var start_pos=$('#blockid').offset().top;
@@ -18,7 +18,6 @@ var start_pos=$('#blockid').offset().top;
   else $('#blockid').removeClass('fixed');
  });
 });
-
 </script>
 
         </head>

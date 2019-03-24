@@ -1,76 +1,80 @@
-<div class="content" align="center" style="height: auto">  
+<div class="content">  
 <?php  
+ $query2[] ="";
+ $i = 0;
+ $query1 ="SELECT `Информация_контента`.`Информация_контентаcol` FROM `Подразделы`, `Информация_контента` where `Подразделы`.`idПодразделы` = `Информация_контента`.`Подраздел`  and (`Информация_контента`.`Контент_idКонтент` = 1 or `Информация_контента`.`Контент_idКонтент` = 2)";  
+    if(!empty($_GET['check_list'])) {
+         foreach($_GET['check_list'] as $check) {
+            if ($check == "all" || $check == "a1") 
+            {
+                break;
+            }
+            else {
+                $query2[$i] = $query2[$i]."`Подразделы`.`Информация` = '$check'";
+                $i++;
+            }
+         }
+         if ($check == "all") 
+         {
+            $query1 ="SELECT `Информация_контента`.`Информация_контентаcol` FROM `Подразделы`, `Информация_контента` where `Подразделы`.`idПодразделы` = `Информация_контента`.`Подраздел`  and 
+                `Информация_контента`.`Контент_idКонтент` = 1";   
 
-if((($_GET["r8"] == "r8") && ($_GET["q7"] == "q7") && ($_GET["q5"] == "q5") &&
-isset($_GET['check'])) || (($_GET["all"] == "all") &&
-isset($_GET['check'])))
-{
-include("../ru/body/text2.php");
-include("../ru/body/text3.php");
-include("../ru/body/text4.php");
-}
-else 
-if(($_GET["r8"] == "r8") && ($_GET["q7"] == "q7") && 
-isset($_GET['check'])) 
-{
-include("../ru/body/text3.php");
-include("../ru/body/text4.php");
-} else 
-if(($_GET["r8"] == "r8") && ($_GET["q5"] == "q5") && 
-isset($_GET['check'])) 
-{
-include("../ru/body/text2.php");
-include("../ru/body/text4.php");
-} else 
-if(($_GET["q5"] == "q5") && ($_GET["q7"] == "q7") && 
-isset($_GET['check'])) 
-{
-include("../ru/body/text2.php");
-include("../ru/body/text3.php");
-} else 
-    if(($_GET["q5"] == "q5") && 
-    isset($_GET['check'])) 
-{
-    include("../ru/body/text2.php");
-} else 
-if(($_GET["q7"] == "q7") && 
-isset($_GET['check'])) 
-{
-include("../ru/body/text3.php");
-} else 
-if(($_GET["r8"] == "r8") && 
-isset($_GET['check'])) 
-{
-include("../ru/body/text4.php");
-} else 
-if((($_GET["gt"] == "gt") && 
-isset($_GET['check1'])) || (($_GET["all1"] == "all1") &&
-isset($_GET['check1'])))
-{
-    include("../ru/body/newcar.html"); 
-} else 
-if(($_GET["gt"] == "gt") && 
-isset($_GET['check1'])) 
-{
-include("../ru/body/newcar.html");
-} else 
-if($_GET["mr"] == "newcar") 
-{
-    include("../ru/body/newcar.html");
-} else 
-if($_GET["mr"] == "testdrive") {
-    include("../ru/body/testdrive.html");
-}
- else
-if (isset($_GET['check']) || isset($_GET['check1'])){
-    echo "<script>alert(\"Ты пидор, не делай так\");</script>"; 
-    include("../ru/body/text1.php");
+         } else 
+         
+        if ($check == "a1") 
+            {
+               $query1 ="SELECT `Информация_контента`.`Информация_контентаcol` FROM `Подразделы`, `Информация_контента` where `Подразделы`.`idПодразделы` = `Информация_контента`.`Подраздел`  
+               and `Информация_контента`.`Контент_idКонтент` = 2";   
+            }  
+         else
+                {
+        $query1 ="SELECT `Информация_контента`.`Информация_контентаcol` FROM `Подразделы`, `Информация_контента` where `Подразделы`.`idПодразделы` = `Информация_контента`.`Подраздел`  and (`Информация_контента`.`Контент_idКонтент` = 1 or `Информация_контента`.`Контент_idКонтент` = 2)";   
+        $query1 .= " and ( ";
+        for ($j = 0;$j<$i;$j++)
+        {
+            $query1 .= $query2[$j];
+            $query1 .= " or ";
+        }
+        $query1 .= $query2[$j-1];
+        $query1 .= " )";
+    }
+    } else 
+    if (isset($_GET['check'])){
+    
+        echo '<div class="errors">Error вы не выбрали ни одного пункта</div>';
+        $query1 = "";
+    } else {
 
-} else
- {
-    include("../ru/body/text1.php");
-}
+$query ="SELECT * FROM `Подразделы`, `Информация_контента` where `Подразделы`.`idПодразделы` = `Информация_контента`.`Подраздел`  and `Информация_контента`.`Контент_idКонтент` = 3";
+$result = mysqli_query($link, $query) or die("Оши213бка " . mysqli_error($link)); 
+if($result)
+{
+    $rows =  mysqli_num_rows($result);
+    $row = mysqli_fetch_row($result);
+    if(($_GET["testdrive"] == "$row[1]")) 
+    {
+    $query1 ="SELECT `Информация_контента`.`Информация_контентаcol` FROM `Подразделы`, `Информация_контента` where `Подразделы`.`idПодразделы` = `Информация_контента`.`Подраздел`  and `Информация_контента`.`Контент_idКонтент` = 3"; 
+    mysqli_free_result($result);
+    }
+} 
+    }
 
+$result = mysqli_query($link, $query1); 
+if($result)
+{
+    $rows =  mysqli_num_rows($result);
+    $row = mysqli_fetch_row($result);
+    for ($i = 0 ; $i < $rows; ++$i)
+    {
+        
+        echo '<div class="td2" style="padding: 10px;">';
+        echo "$row[0]";
+        $row = mysqli_fetch_row($result);
+        echo "</div>";
+    }
+    mysqli_free_result($result);
+} 
+mysqli_close($link);
 ?>
-
+ 
 </div>
