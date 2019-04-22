@@ -4,7 +4,7 @@
          header("Content-Type: text/html; charset=utf-8");
          $title = "Автосалон |  Автомобили";
          include("text/hat.php");
-        include("text/head.html");
+         include("text/head.php");
         include("text/menu1.php"); 
         include("text/cotalog.php"); 
         include("text/footer.html"); 

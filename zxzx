@@ -1,0 +1,293 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 06, 2019 at 10:37 AM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO a";
+SET time_zone = "+00:00";
+
+--
+-- Database: `dbmylive`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Должность`
+--
+
+CREATE TABLE `Должность` (
+  `idДолжность` int(11) NOT NULL,
+  `Название` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Должность`
+--
+
+INSERT INTO `Должность` (`idДолжность`, `Название`) VALUES
+(1, 'Администратор'),
+(2, 'Пользователь'),
+(3, 'гость');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Информация_контента`
+--
+
+CREATE TABLE `Информация_контента` (
+  `idИнформация_контента` int(11) NOT NULL,
+  `Информация_контентаcol` longtext,
+  `Контент_idКонтент` int(11) NOT NULL,
+  `Подраздел` int(11) NOT NULL,
+  `idПользователя` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Информация_контента`
+--
+
+INSERT INTO `Информация_контента` (`idИнформация_контента`, `Информация_контентаcol`, `Контент_idКонтент`, `Подраздел`, `idПользователя`) VALUES
+(2, '<img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRez-Tmi0d8msrqN54ebmiPNXILs5nbpj7OlF9zFi0SDocHhlS5\" width=\"100%\" height=\"auto\" class=\"imgs\">\r\n                           \r\n                           <p align=\"center\">Audi Q5\r\n                                 </p>\r\n                                 <p align=\"center\">\r\n                                     850 000р 2.0 TFSI Tiptronic quattro\r\n                                 </p>\r\n                                 <details class=\"details1 summary\">\r\n                                         <summary>\r\n                                         Информация\r\n                                         </summary>\r\n                                         Технические характеристики соответствуют заявленным. Юридические ограничения не обнаружены. ДТП не обнаружены.\r\n                                        <p>\r\n                                        <br> <b>Размеры:</b> 4 663-4 671 мм Длина x 1 893 мм Ширина x 1 635-1 659 мм Высота\r\n                                        <br><b>Расход топлива:</b> 6,8-8,3 л/100 км смешанный (8-11 город, 5,9-6,8 трасса)\r\n                                        <br><b>Объем топливного бака:</b> 70 л\r\n                                             <br><b> Трансмиссия:</b>7-ступенчатая механическая, 8-ступенчатая автоматическая\r\n     \r\n                                         <br><b> Комментарий предыдущего владельца:</b>\r\n                                            <br> Машинку ранил неопытный водитель на ваз 2109, с ранением пусть машинка будет по цене 850 0000 рублей, подлечу в марте опять будет 950 000 рублей! Ремонта максимум 20 000 рублей\r\n                                         </p>\r\n                                         <iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/YyBOK64_G9Q\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n                                     </details >', 1, 1, 1),
+(3, '\r\n                                            <img src=\"https://www.audi.ru/content/dam/nemo/ru/models/q7/new_q7/1920x600-aq7-151008-2e-auto-audi-a7-grau-j-videos-14u.jpg\"  width=\"50%\" height=\"100%\" class=\"imgs\">\r\n                                            <p align=\"center\">Audi Q7\r\n                                            </p >\r\n                                            <p align=\"center\">\r\n                                            900 000р 3.0 TDI clean diesel tiptronic quattro\r\n                                            </p>\r\n                                            <details class=\"details1 summary\"> \r\n                                                    <summary>\r\n                                                        Информация\r\n                                                    </summary>\r\n                                                    <br>\r\n                                                   <b> Проверка по VIN</b>\r\n                                                   <br> WAUZZZRR*CA****19\r\n                                                   <br><b>Нам не удалось найти информацию про указанный VIN. Будьте внимательны!</b>\r\n                                                   <p>\r\n                                                        <br><b> Размеры:</b> 5 052 мм Длина x 1 968 мм Ширина x 1 741 мм Высота\r\n                                                                <br> <b> Расход топлива:</b> 6,3-7,7 л/100 км смешанный (7,3-9,4 город, 5,7-6,8 трасса)\r\n                                                                        <br> <b> Объем топливного бака:</b> от 75 до 85 л\r\n                                                                                <br> <b> Разгон до 100 км/ч: </b>от 6,1 до 6,9 секунд\r\n\r\n                                                <br><br> <b>Комментарий предыдущего владельца:</b>\r\n                                           \r\n                                                <br> Отличный автомобиль во всех отношениях!\r\n                                                <br>Полная комплектация!\r\n                                                <br>Обслуживаем в Ауди центре! Недавно заменили масло и все три фильтра.\r\n                                                <br>Мы единственные владельцы автомобиля, поэтому за машиной следим.\r\n                                                <br>Машина в отличном состоянии как по кузову, салону так и по техническим характеристикам. Все работает на отлично! Коробка и двигатель в идеальном состоянии. Салон - пластик и кожа в отличном состоянии, мы за этим очень следим!\r\n                                                <br>В ДТП на ней не попадали!\r\n                                                <br>Машина очень надежная и простая в эксплуатации! Салон очень вместительный!\r\n                                                </p>\r\n                                                    \r\n                                                   \r\n                                                </details>\r\n', 1, 2, 1),
+(4, '\r\n                                            <img src=\"https://povozcar.ru/wp-content/uploads/Audi-R8-2013_face.jpg\" width=\"100%\" height=\"auto\" class=\"imgs\">\r\n                                            <p align=\"center\">Audi R8\r\n                                                </p >\r\n                                                <p align=\"center\">\r\n                                                4 800 000р I Рестайлинг V10 plus\r\n                                                </p>\r\n                                            <details class=\"details1 summary\">\r\n                                                    <summary>\r\n                                                        Информация\r\n                                                    </summary>\r\n                                                   \r\n                                                    <p><br><b>Разгон до 100 км/ч:</b> 3,2 секунд\r\n                                                            <br><b>Мощность в лошадиных силах:</b> 449 кВт\r\n                                                            <br><b>Максимальная скорость:</b> 330 км/ч\r\n                                                            <br><b>Двигатель:</b> 5,2 л V10\r\n                                                            <br><b>Расход топлива:</b>12 л/100 км смешанный (18 город, 9,3 трасса)\r\n                                                            <br><br> <b>Комментарий предыдущего владельца:</b>\r\n                                                            <br> Версия “Plus”, облегчённый кузов, улучшенная управляемость, форсированный мотор ! \r\n                                                            <br> Состояние 5+, все элементы в заводском ЛКП, новые шины MICHELIN Pilot Sport 4S , полностью стоковая, спокойная и бережная эксплуатация, гарантия от производителя до конца года, цвет матовый синий, только диллерское обслуживание, коробка DSG, тормоза керамика ), мотор 550 л.с. !!! \r\n                                                        \r\n                                                        \r\n                                                        </p>\r\n                                                   \r\n                                                </details>\r\n', 1, 3, 1),
+(5, '       \r\n                         <img src=\"https://img.drive.ru/i/0/5bff6ca1ec05c4372d000012.jpg\" width=\"100%\" height=\"auto\" class=\"imgs\">\r\n                            \r\n                       <p align=\"center\">Audi e-tron GT\r\n                             </p>\r\n                             <p align=\"center\">\r\n                                    Ориентировочная цена - 20 млн рублей\r\n                             </p>\r\n                             <details class=\"details1 summary\">\r\n                                     <summary>\r\n                                     Информация\r\n                                     </summary>\r\n                                     \r\n                                    <p>\r\n                                    <br> Лос-Анджелесе на публике представлен шоу-кар Audi e-tron GT, предвещающий ещё один серийный электромобиль бренда, который должен быть выведен в свет до конца 2020 года. В соответствии с ранее объявленной стратегией использования четырёх платформ на электрокарах марки, e-tron GT явился первенцем новой «тележки» e-platform, разработанной вместе с Porsche.\r\n                                    <img src=\"https://img.drive.ru/i/0/5bff6c8dec05c41969000022.jpg\" width=\"100%\" height=\"100%\" class=\"imgs\">\r\n                                    <br>В автомобиле можно найти отсылки к недавним концептам фирмы (Aicon, PB18 e-tron). Под панелями же кузова, использующего микст из алюминия, углепластика и высокопрочной стали, скрыта новая начинка. Спереди и сзади установлено по синхронному электродвигателю с общей отдачей в 590 л.с., а электроника гибко перераспределяет их тягу между осями, а также правым и левым бортами.\r\n                                    <img src=\"https://img.drive.ru/i/0/5bff70a4ec05c4612f00003f.jpg\" width=\"100%\" height=\"100%\" class=\"imgs\">\r\n                                         <br><b> Трансмиссия:</b>7-ступенчатая механическая, 8-ступенчатая автоматическая\r\n                                        <br>Нынешний герой, электрокар e-tron GT, как мы уже говорили, созданный на новой основе, появится в серии в 2020-м и откроет путь ряду близких сородичей. А помимо того, инженеры Audi разработают другие электрические модели на платформах PPE (опять же совместная с Porsche разработка) и модульной всефольксвагеновской MEB. К 2025 году число чистых электрокаров в портфеле Audi составит не менее двенадцати.\r\n\r\n                                 </details>\r\n  \r\n      ', 2, 4, 1),
+(6, '\r\n                            <iframe width=\"100%\" height=\"700vh\" src=\"https://www.youtube.com/embed/VaUczog5tkc\" frameborder=\"0\" \r\n                            allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n                        </iframe>\r\n                   \r\n                    ', 3, 5, 1),
+(7, '        <iframe width=\"100%\" height=\"700vh\" src=\"https://www.youtube.com/embed/QBkTXSn3otY\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>    \r\n', 3, 5, 1),
+(8, '\r\n                        <iframe width=\"100%\" height=\"700vh\" src=\"https://www.youtube.com/embed/cB-66nJOJ08\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 3, 5, 1),
+(9, '\r\n                                            <img src=\"https://povozcar.ru/wp-content/uploads/Audi-R8-2013_face.jpg\" width=\"100%\" height=\"auto\" class=\"imgs\">\r\n                                            <p align=\"center\">Audi R8\r\n                                                </p >\r\n                                                <p align=\"center\">\r\n                                                4 800 000р I Рестайлинг V10 plus\r\n                                                </p>\r\n                                            <details class=\"details1 summary\">\r\n                                                    <summary>\r\n                                                        Информация\r\n                                                    </summary>\r\n                                                   \r\n                                                    <p><br><b>Разгон до 100 км/ч:</b> 3,2 секунд\r\n                                                            <br><b>Мощность в лошадиных силах:</b> 449 кВт\r\n                                                            <br><b>Максимальная скорость:</b> 330 км/ч\r\n                                                            <br><b>Двигатель:</b> 5,2 л V10\r\n                                                            <br><b>Расход топлива:</b>12 л/100 км смешанный (18 город, 9,3 трасса)\r\n                                                            <br><br> <b>Комментарий предыдущего владельца:</b>\r\n                                                            <br> Версия “Plus”, облегчённый кузов, улучшенная управляемость, форсированный мотор ! \r\n                                                            <br> Состояние 5+, все элементы в заводском ЛКП, новые шины MICHELIN Pilot Sport 4S , полностью стоковая, спокойная и бережная эксплуатация, гарантия от производителя до конца года, цвет матовый синий, только диллерское обслуживание, коробка DSG, тормоза керамика ), мотор 550 л.с. !!! \r\n                                                        \r\n                                                        \r\n                                                        </p>\r\n                                                   \r\n                                                </details>\r\n', 1, 3, 1),
+(10, '        <h1 align=\"center\">Ауди Центр Восток </h1>\r\n        <h2 align=\"left\"><b>О компании </b></h2>\r\n        <h3 >Ауди Центр Восток — первый дилерский центр, построенный по уникальной концепции «Терминал», в Центральном регионе России. </h3>\r\n        <p>\r\n        Данная концепция отражает самые современные тенденции в области дизайна и стандартов обслуживания.\r\n        Ауди Центр Восток — это дилерский центр, соответствующий всем стандартам и ценностям марки Audi. Прогрессивные автомобильные технологии, спортивный характер, актуальный дизайн, качественное обслуживание и комфортная атмосфера ждут каждого Клиента нашего дилерского центра!\r\n        Площадь нового трёхэтажного автосалона составляет 4700 кв.м., просторный демонстрационный зал позволяет разместить до 18 автомобилей в шоу-руме площадью 800 кв.м.\r\n        Сервисная зона площадью 655 кв.м. оснащена 11 постами слесарного ремонта, включает 2 поста прямой приёмки, пост регулировки установки угла колёс и 2 зоны выдачи. \r\n        Ауди Центр Восток предлагает полный комплекс услуг по приобретению автомобилей и оригинальных запасных частей, сервисному, гарантийному и послегарантийному обслуживанию автомобилей, а также широкий перечень дополнительных услуг: trade-in, страхование, кредитные и лизинговые программы, рассрочка.\r\n        Модельный ряд автомобилей Audi представлен в дилерском центре в полном объёме.\r\n        К услугам Клиентов — зона отдыха, где можно приятно провести время в кафе и воспользоваться бесплатным доступом в Интернет через сеть Wi-Fi. Кроме того, на втором этаже дилерского центра имеется детский уголок, где самые маленькие наши гости смогут развлечься игрой в приставку и собрать Lego.\r\n        Ждем Вас ежедневно по адресу: г. Балашиха, шоссе Энтузиастов, д. 12Б (3 км от МКАД) с <b>9.00</b> до <b>22.00</b> ежедневно. Сервис работает с <b>7.00</b> до <b>21.00</b>.\r\n        Ауди Центр Восток — прогресс в деталях!</p>\r\n        <img src=\"/images/1z.jpeg\"width=\"50%\">\r\n        ', 4, 7, 1),
+(11, '        <table width=\"100%\" style=\"padding: 1%\">\r\n                <tr>\r\n                <h1>Наше расположение:</h1>\r\n                    <td style=\"padding-right: 5%\">\r\n                <iframe class=\"maps\" src=\"https://maps.google.com/maps?width=100&amp;height=200&amp;hl=en&amp;q=orel+(%D0%93%D0%BE%D1%80%D0%BE%D0%B4)&amp;ie=UTF8&amp;t=&amp;z=21&amp;iwloc=B&amp;output=embed\" frameborder=\"0\" scrolling=\"no\">\r\n                </iframe>\r\n            </td>\r\n            <td valign=\"top\">\r\n                 <h1>   СЛУЖБА ПОДДЕРЖКИ КЛИЕНТОВ КОМПАНИИ Audi</h1>\r\n                    <p>Мы всегда готовы помочь. Обратитесь в Службу поддержки клиентов компании Audi. Наши специалисты ответят на все ваши вопросы.\r\n                    </p>\r\n                  <p>  Телефон: </p>\r\n                  <p> <a href=\"callto:88002005990\"> 8-800-200-59-90 (Россия) </a></p>\r\n                    Эл. почта: <a href=\"russia@audi-services.eu\">russia@audi-services.eu</a> \r\n                    \r\n                    Наша служба поддержки клиентов компании Audi работает круглосуточно. \r\n                    </p>\r\n            </td>\r\n            </tr>\r\n            </table>\r\n', 6, 7, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Контент`
+--
+
+CREATE TABLE `Контент` (
+  `idКонтент` int(11) NOT NULL,
+  `Название` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Контент`
+--
+
+INSERT INTO `Контент` (`idКонтент`, `Название`) VALUES
+(1, 'Автомобили с пробегом'),
+(2, 'Новые автомобили'),
+(3, 'Тест драйв'),
+(4, 'О нас'),
+(6, 'Контакты');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Подразделы`
+--
+
+CREATE TABLE `Подразделы` (
+  `idПодразделы` int(11) NOT NULL,
+  `Информация` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Подразделы`
+--
+
+INSERT INTO `Подразделы` (`idПодразделы`, `Информация`) VALUES
+(1, 'q5'),
+(2, 'q7'),
+(3, 'r8'),
+(4, 'gt'),
+(5, 'testdrive'),
+(7, 'Безраздела');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Пользователь`
+--
+
+CREATE TABLE `Пользователь` (
+  `idПользователь` int(11) NOT NULL,
+  `Пароль` varchar(45) NOT NULL,
+  `Имя` varchar(45) NOT NULL,
+  `Фамилия` varchar(45) NOT NULL,
+  `Информация` varchar(45) NOT NULL,
+  `Должность` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Пользователь`
+--
+
+INSERT INTO `Пользователь` (`idПользователь`, `Пароль`, `Имя`, `Фамилия`, `Информация`, `Должность`) VALUES
+(1, 'dasd', 'Александр', 'Смирнов', 'q7', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `Должность`
+--
+ALTER TABLE `Должность`
+  ADD PRIMARY KEY (`idДолжность`);
+
+--
+-- Indexes for table `Информация_контента`
+--
+ALTER TABLE `Информация_контента`
+  ADD PRIMARY KEY (`idИнформация_контента`),
+  ADD KEY `fk_Информация_контента_Контент_idx` (`Контент_idКонтент`),
+  ADD KEY `fk_Информация_контента_Пользоват_idx` (`idПользователя`),
+  ADD KEY `Подраздел` (`Подраздел`);
+
+--
+-- Indexes for table `Контент`
+--
+ALTER TABLE `Контент`
+  ADD PRIMARY KEY (`idКонтент`),
+  ADD UNIQUE KEY `idКонтент_UNIQUE` (`idКонтент`);
+
+--
+-- Indexes for table `Подразделы`
+--
+ALTER TABLE `Подразделы`
+  ADD PRIMARY KEY (`idПодразделы`);
+
+--
+-- Indexes for table `Пользователь`
+--
+ALTER TABLE `Пользователь`
+  ADD PRIMARY KEY (`idПользователь`),
+  ADD KEY `fk_Пользователь_Должность1_idx` (`Должность`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `Должность`
+--
+ALTER TABLE `Должность`
+  MODIFY `idДолжность` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `Информация_контента`
+--
+ALTER TABLE `Информация_контента`
+  MODIFY `idИнформация_контента` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `Контент`
+--
+ALTER TABLE `Контент`
+  MODIFY `idКонтент` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `Подразделы`
+--
+ALTER TABLE `Подразделы`
+  MODIFY `idПодразделы` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Информация_контента`
+--
+ALTER TABLE `Информация_контента`
+  ADD CONSTRAINT `fk_Информация_контента_Пользовате1` FOREIGN KEY (`idПользователя`) REFERENCES `Пользователь` (`idПользователь`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `информация_контента_ibfk_1` FOREIGN KEY (`Контент_idКонтент`) REFERENCES `Контент` (`idКонтент`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `Пользователь`
+--
+ALTER TABLE `Пользователь`
+  ADD CONSTRAINT `пользователь_ibfk_1` FOREIGN KEY (`Должность`) REFERENCES `Пользователь` (`idПользователь`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `dbmylive`.`Контент` (
+  `idКонтент` INT NOT NULL AUTO_INCREMENT,
+  `Название` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idКонтент`),
+  UNIQUE INDEX `idКонтент_UNIQUE` (`idКонтент` ASC))
+
+CREATE TABLE IF NOT EXISTS `dbmylive`.`Подразделы` (
+  `idПодразделы` INT NOT NULL AUTO_INCREMENT,
+  `Информация` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idПодразделы`))
+
+
+CREATE TABLE IF NOT EXISTS `dbmylive`.`Должность` (
+  `idДолжность` INT NOT NULL AUTO_INCREMENT,
+  `Название` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idДолжность`))
+
+
+
+
+CREATE TABLE IF NOT EXISTS `dbmylive`.`Пользователь` (
+  `idПользователь` INT NOT NULL AUTO_INCREMENT,
+  `Пароль` VARCHAR(45) NOT NULL,
+  `Имя` VARCHAR(45) NOT NULL,
+  `Фамилия` VARCHAR(45) NOT NULL,
+  `Информация` VARCHAR(45) NOT NULL,
+  `Должность` INT NOT NULL,
+  `Логин` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idПользователь`),
+  INDEX `fk_Пользователь_Должность1_idx` (`Должность` ASC),
+  CONSTRAINT `fk_Пользователь_Должность1`
+    FOREIGN KEY (`Должность`)
+    REFERENCES `dbmylive`.`Должность` (`idДолжность`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+
+
+CREATE TABLE IF NOT EXISTS `dbmylive`.`Информация_контента` (
+  `idИнформация_контента` INT NOT NULL AUTO_INCREMENT,
+  `Информация_контентаcol` VARCHAR(1000) NULL,
+  `Контент_idКонтент` INT NOT NULL,
+  `Подраздел` INT NOT NULL,
+  `idПользователя` INT NOT NULL,
+  PRIMARY KEY (`idИнформация_контента`),
+  INDEX `fk_Информация_контента_Контент_idx` (`Контент_idКонтент` ASC),
+  INDEX `fk_Информация_контента_Подраздел_idx` (`Подраздел` ASC),
+  INDEX `fk_Информация_контента_Пользоват_idx` (`idПользователя` ASC),
+  CONSTRAINT `fk_Информация_контента_Контент`
+    FOREIGN KEY (`Контент_idКонтент`)
+    REFERENCES `dbmylive`.`Контент` (`idКонтент`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Информация_контента_Подразделы1`
+    FOREIGN KEY (`Подраздел`)
+    REFERENCES `dbmylive`.`Подразделы` (`idПодразделы`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Информация_контента_Пользовате1`
+    FOREIGN KEY (`idПользователя`)
+    REFERENCES `dbmylive`.`Пользователь` (`idПользователь`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
