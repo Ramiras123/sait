@@ -62,7 +62,14 @@ if($numrows==0)
  }
   else {
     $message = "All fields are required!";
-	}
+  }
+$query=("SELECT `idПользователь` FROM `Пользователь` WHERE 	`Пользователь`.`Логин`='".$username."'");
+ $result =mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+  $rows = mysqli_num_rows($result); // количество полученных строк
+  $row = mysqli_fetch_row($result);
+  $sql="INSERT INTO `online` (`id`, `online`, `click`, `id_user`, `time`) 
+	VALUES(NULL,'0', '0', '$row[0]', '0')";
+  $result=mysqli_query($link,$sql);
 	}
 	?>
 

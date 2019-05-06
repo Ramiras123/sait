@@ -1,9 +1,11 @@
 <?php
            include("../connect.php");
+           include("online.php");
            header("Content-Type: text/html; charset=utf-8");
            $title = "Автосалон |  Автомобили";
            include("text/hat.php");
            include("text/head.php");
+           
                       ?>
 
      <div class="container mlogin">
@@ -59,14 +61,20 @@ while($row=mysqli_fetch_assoc($result))
          $_SESSION['session_username']=$username;
          $_SESSION['id'] = $row[0];
          $_SESSION['dolj'] = $row[1];
+         $_SESSION['ONLINE'] = strtotime('+30 sec');
+         $result = "UPDATE  `online` SET `online`.`online` = '1' WHERE  `online`.`id_user` = '$row[0]'";
+         if (mysqli_query($link, $result)) {
+                echo "New record created successfully";
+            } else {
+              // echo "Error: " . $result . "<br>" . mysqli_error($link);
+            }
+
  /* Перенаправление браузера */
        header("Location: body.php");
          
         }
         
-	} else {
-	//  $message = "Invalid username or password!";
-	
+	} else {	
         echo '<p style="color: red;">'.'MESSAGE: Invalid username or password!</p>';
  }
 	} else {

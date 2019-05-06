@@ -4,6 +4,7 @@
          include_once("text/hat.php");
          include("text/head.php");
                   include("../connect.php");
+                  include("online.php");
         $query ="SELECT `Информация_контента`.`Информация_контентаcol` FROM `Подразделы`, `Информация_контента` where `Подразделы`.`idПодразделы` = `Информация_контента`.`Подраздел`  and `Информация_контента`.`Контент_idКонтент` = 6";
  
         $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 

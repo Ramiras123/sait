@@ -1,5 +1,6 @@
 <?php
  include("../connect.php");
+ include("online.php");
 header("Content-Type: text/html; charset=utf-8");
 $title = "Автосалон |  Автомобили";
 include("text/hat.php");
@@ -22,7 +23,9 @@ if(!empty($_POST['box'])) {
       echo "<button name = 'box12' type='submit' value='$check'>Отправить</button>";
       echo '</form>';
         mysqli_free_result($result);
-    }         
+    }     
+
+      
 echo "</div>";
 include("text/footer.html"); 
 

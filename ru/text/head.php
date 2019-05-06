@@ -5,6 +5,7 @@
         <input name="gl" type="submit" value="О нас" class="button"/>
         <input name="gl2" type="submit" value="Автомобили" class="button"/>
         <input src="../menu.html"  name="gl3"  type="submit" value="Контакты"  class="button"/>
+        
         <?php
         session_start();
         if(isset($_SESSION["session_username"])){
@@ -15,6 +16,5 @@
 <input src="#z1" name="auto"  type="submit" value="Авторизация/регистрация"  class="button" style="margin-bottom: 0%; margin-right: 0%; margin-left: 120vh;"/>
         <?php } ?>
 </form>
-</div>
-                
+</div>                
 <body>

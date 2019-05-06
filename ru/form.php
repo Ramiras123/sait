@@ -1,5 +1,6 @@
 <?php 
  include("../connect.php");
+ include("online.php");
 $i = htmlspecialchars($_POST['mark']);
 $query ="SELECT DISTINCT `Подразделы`.`idПодразделы` FROM `Подразделы` where `Подразделы`.`Информация` = '$i' ";
 $result = mysqli_query($link, $query); 

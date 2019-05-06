@@ -1,5 +1,6 @@
 <?php 
  include("../connect.php");
+ include("online.php");
  header('X-XSS-Protection:0');
  header("Content-Type: text/html; charset=utf-8");
  $title = "Автосалон |  Автомобили";

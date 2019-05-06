@@ -110,10 +110,10 @@ if($result)
         echo '<div id="td2">';
         session_start();
         echo "$row[0]";
-        if((isset($_SESSION["session_username"])) and (($_SESSION['dolj'] == 1) or ($row[2] == $_SESSION['id']))){
+        if((isset($_SESSION["session_username"])) and (($_SESSION['dolj'] == 1) or ($row[2] == $_SESSION['id']) or ($_SESSION['dolj'] == 5) or ($_SESSION['dolj'] == 4))){
            
             echo '<form action="delete.php" method="GET">';
-            echo "<button name = 'box[]' type='submit' class='button1' value='$row[0]'>Удалить</button>";
+            echo "<button name = 'box[]' type='submit' class='button1' value='$row[1]'>Удалить</button>";
             echo '</form>';
             echo '<form action="upd.php" method="POST">';
             echo "<button name = 'box[]' type='submit' class='button1' value='$row[1]'>Редактировать</button>";
@@ -217,7 +217,7 @@ echo   "<select name='mark' autofocus required>";
         <a href="#" class="close">Закрыть окно</a>
     </div>
 
-<?php if((isset($_SESSION["session_username"])) && (($_SESSION['dolj'] == 1) || ($_SESSION['dolj'] == 2))){ ?>
+<?php if((isset($_SESSION["session_username"])) && ((($_SESSION['dolj'] == 5 ) || ($_SESSION['dolj'] == 4) || $_SESSION['dolj'] == 1) || ($_SESSION['dolj'] == 2))){ ?>
     <a href="#zatemnenie">Добавить запись</a>
     <?php  } mysqli_free_result($result); ?>
     
